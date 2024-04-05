@@ -1,0 +1,27 @@
+body{background-color: rgb(54, 144, 218);
+}
+h1{color: rgba(255, 255, 255, 0.986);}
+
+header{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;}
+    
+    section{background-color: aliceblue;
+        font:normal 25pt italic;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.788);
+    border-radius: 15px;
+ }
+  
+    div#msg
+    {text-align: center;
+    
+    padding: 15px;
+margin: 60px;
+width: 500px;
+margin: auto;
+}
+
+
+footer{text-align: center;
+color: azure;
+font-style: italic;}

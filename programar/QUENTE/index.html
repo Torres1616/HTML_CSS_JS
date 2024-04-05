@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapidando</title>
+</head>
+<body>
+    <h1>Medição de Pika</h1>
+ SUA PIKA TEM :<input type="number" name="txtres" id="txtres">CM
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+</body>
+<script>
+    function calcular(){
+    var txtr = window.document.getElementById('txtres')
+    var res = window.document.querySelector("div#res") 
+    var vel = Number(txtr.value)
+    if(vel > 15) {
+        res.innerHTML += `<p><strong>Multado!!</strong>Vai pegar é manga?</p>
+        <p><strong>Você,está acima do previsto,afaste as mãos de perto de sua Arma Genética.</strong></p>`
+    } else if (vel < 15) {
+    res.innerHTML += `<p><strong>Foi detectado que você está com ${vel}CM</strong></p>
+    <p><strong>Super Normal Bròu</strong></p>
+        <p>Porém vejo que estas calva!<strong>//NO CHÃO AGORA//<strong></p>`
+    }
+    }
+</script>
+</html>

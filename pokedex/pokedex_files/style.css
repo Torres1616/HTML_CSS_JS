@@ -1,0 +1,41 @@
+.elemento.movido{
+    transition: transform 0.3s;
+}
+.elemento.movido:hover{
+    transform: translate(10px,10px);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    text-align: center;
+background: linear-gradient(to bottom, #0ec6e8,#006d99);
+min-height: 100vh;
+}
+
+main{
+    background-color: brown;
+    display: inline-block;
+    margin-top: 2%;
+    padding: 30px;
+    position: relative;
+}
+
+.pokedex{
+    width: 100%;
+    max-width: 1000px;
+}
+
+.pokemon_image{
+    position: absolute;
+    bottom: 52%;
+    left: 25%;
+    transform: translate(-70%,10%);
+    height: 12%;
+
+}
