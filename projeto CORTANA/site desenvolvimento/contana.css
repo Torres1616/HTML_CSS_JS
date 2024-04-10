@@ -46,7 +46,7 @@ body{
         box-shadow: 3px 2px 2px #00000031;
        }
 
-       .logo{color: var(--texto-font0);
+        .logo{color: var(--texto-font0);
         margin: 1%;
         padding-left: 30%;
         padding-right: 30%;
@@ -122,6 +122,7 @@ main{background-color: #000000;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.61);
+    
 
 
 }
@@ -215,6 +216,7 @@ font-size: 1.2em;
 .win{
     max-width: 700px ;
     max-height: 400px;
+    
     margin: auto;
     display: block;
     
