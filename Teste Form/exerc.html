@@ -8,7 +8,9 @@
 <body>
     <form action="">
         <p>
-            nome: <input type="text" name="nome" id="n1">
+            <label for="n1">nome:</label>nome:
+             <input type="text" name="nome" id="n1" required minlength="6" maxlength="16"
+             placeholder="nome" autocomplete="username">
         </p>
         <p>
             sobrenome: <input type="text" name="sobrenome" id="so1">
