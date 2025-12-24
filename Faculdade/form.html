@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+    <meta charset="UTF-8">
+    <zmeta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primero Form</title>
+<body>
+    <form action="/Faculdade/" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" minlength="3" id="nome" />
+
+            <label for="email">Email:</label>
+            <input type="text" minlength="10" id="email"/>
+
+            <label for="cpf">CPF:</label>
+            <input type="number" minlength="11" id="cpf"/>
+        </fieldset>
+        
+        <fieldset>
+            <legend for="Tipo_de_Endereco">Tipo:</legend>
+            <select name="Endereco" id="Tipo_de_Endereco">
+                <option value="">Selecione</option>
+                <option value="">Rua</option>
+                <option value="">Estrada</option>
+                <option value="">Rodovia</option>
+                <option value="">Outros</option>
+            </select>
+            
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro"/>
+
+            <label for="numero_endereco">Numero:</label>
+            <input type="number" id="numero_endereco"/>
+
+            <label for="complemento_endereco">Complemento:</label>
+            <Input type="text" id="complemento_endereco"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>FALE CONOSCO!</legend>
+            <label for="msg">Mensagem:</label>
+            <textarea tupe="text" id="msg"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <button type="submit">Enviar Mensagem</button>
+            <button type="reset">Limpar Formulario</button>
+        </fieldset>
+    </form>
+</body>
