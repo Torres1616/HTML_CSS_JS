@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de If</title>    
+</head>
+<body>
+    <h1>Uso de If</h1>
+        <input type="number" id="digite" placeholder="Digite um numero!">
+        <input type="number" id="digite1" placeholder="Digite outro numero!">
+
+        <button type="button" onclick="pegar()">Check eles!</button>
+
+    <div id="resultado"></div>
+<script>
+    function pegar(){
+
+        let chek = document.getElementById("digite").value;
+        let chek1 = document.getElementById("digite1").value;
+
+        chek = Number(chek);
+        chek1 = Number(chek1);
+
+        let Mensagem = "";
+    
+
+    if (chek > chek1 && chek1 > 0){
+        Mensagem = "A primeira variável é maior que a segunda e a segunda variável é um número positivo";
+        }
+    else if (chek > chek1 && chek1 <= 0){
+        Mensagem = "primeira variável é maior ou a segunda e a segunda variável não é um número positivo";
+    }
+    else if(chek < chek1 || chek1 > 0){
+        Mensagem = "primeira variável é menor que a segunda ou a segunda variável é um número positivo";
+    }
+
+    else {Mensagem = ("ja era")}
+
+    document.getElementById("resultado").innerHTML = Mensagem;
+}
+</script>
+</body>
