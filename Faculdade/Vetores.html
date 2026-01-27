@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores-Treino</title>
+</head>
+<body>
+
+<div>Vamos lá!</div>
+<!-- Definição das Caixas -->
+<label>Valor 1</label>      
+    <input type="text" id="n1" placeholder="Digite Numero positivo...">
+<label>Valor 2</label>     
+    <input type="text" id="n2" placeholder="Digite Numero positivo...">
+<!-- Botão da função-->
+    <button type="button" onclick="executar()">Verificar</button>
+<div id="res">...</div>
+
+
+</body>
+<script>
+//Definir função executar(ARROW FUCTION)
+    const executar = () =>{
+//Armazena as variaveis e transforma em numeros.    
+    let numeros = [];
+    const v1 = Number(document.getElementById("n1").value);
+    const v2 = Number(document.getElementById("n2").value);
+    numeros = [v1,v2];
+
+//Definir campo vazio(string) da mensagem.
+    let mens = ""
+//Definir bolleano para a comparação.
+    let encontrouPositivo = false;
+
+    for(let x in numeros) {
+        // Se for positivo, escreve isso.
+        if(numeros[x] > 0){
+           mens += "O numéro (" + numeros[x] + ") é positivo" + "<br>";
+           //ponto chave da comparação
+           encontrouPositivo = true;
+        }
+
+        // Se NÃO for positivo, escreve que é negativo.
+        else{
+            mens += "Número (" + numeros[x] + ") é Negativo.<br>"
+        }
+    }
+
+    // Se não ouver nenhum positivo
+    if(encontrouPositivo === false){
+        mens = "Sem Numeros positivos, insira novamente!!"
+    }
+
+    //Pega o id da <div> e altera seu texto
+    document.getElementById("res").innerHTML = mens;
+}
+</script>
+</html>
+
