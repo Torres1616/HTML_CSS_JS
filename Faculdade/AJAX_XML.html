@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX_!PROJET!</title>
+</head>
+<body>
+    <h1>Uso do AJAX para requisição!</h1>
+
+<!--Usar img por ter o atributo SRC-->
+    <img id="Foto" src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/002.png" alt="A imagem aparecerá aqui" width="300">
+    <br><br>
+
+    <button type="button" onclick="carregar_img()">Aperte!</button>
+</body>
+    <script type="text/javascript">
+//Defina a função da imagem
+        function carregar_img(){
+//Crie o objeto e sua instancia
+            let xml = new XMLHttpRequest();
+            let url = "https://dog.ceo/api/breeds/image/random";
+//Crie o endereço da requisição ( method, link, tipo da requisição)
+            xml.open('get', url, true);
+//Inicie as requisições com o onreadystatechange e passe seus metodos
+            xml.onreadystatechange = function(){
+                //Status indentico a 3 + carregando.
+                if(xml.readyState == 3){
+                    console.log("Carregando imagem...")
+                }
+                //Status indentico a 4 = Dados recebidos
+                if(xml.readyState == 4){
+                    var dadosjason = JSON.parse(xml.responseText);
+                    console.log("Dados recebidos!");
+                    console.log(dadosjason);
+                    console.log(dadosjason.message);
+
+                
+                //Faça aparecer a imagem da requisitada no html
+                var trocarhtml = document.getElementById("Foto");
+                //Usar o SRC. quando Encolver Imagens
+                trocarhtml.src = dadosjason.message;
+            }
+        }
+//Envie sua requisição - Parametro NULL = está pegando e não levando dados.
+        xml.send(null);
+    }
+        
+    </sc
