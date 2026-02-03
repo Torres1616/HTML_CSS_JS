@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex Interativo</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 30px; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .resultado { margin-top: 30px; }
+        h2 { text-transform: capitalize; }
+    </style>
+</head>
+<body>
+
+    <h1>Quem é esse Pokémon?</h1>
+
+    <input type="text" id="input_usuario" placeholder="Digite (ex: pikachu, ditto)">
+    
+    <button onclick="buscarPokemon()">Buscar</button>
+
+    <div class="resultado">
+        <h2 id="txt_nome">...</h2>
+        <img id="img_pokemon" src="" width="200" alt="">
+        <p>Tipo: <strong id="txt_tipo">...</strong></p>
+    </div>
+
+    <script type="text/javascript">
+        function buscarPokemon() {
+
+            //Pegar o que foi digitado
+            var input = document.getElementById("input_usuario");
+            var nomePokemon = input.value;
+
+            
+            //Converter tudo para minúsculo por causa da restrição da API
+            nomePokemon = nomePokemon.toLowerCase();
+
+        
+            // Definir a URL da API com o nome do Pokémon(var definida)
+            var url = "https://pokeapi.co/api/v2/pokemon/" + nomePokemon;
+
+            //Usar o Fetch para requisitar da API
+            fetch(url, { method: 'get' }) // link e o metodo
+
+            // Usar o .then para pegar a resposta - Response(promessa)
+            .then(function(response) {
+                // Se a resposta não for OK, joga pro erro
+                if (!response.ok) {
+                    throw new Error("Pokémon não encontrado!");
+                }
+                return response.json();// Converter a resposta para JSON (destranca)
+            })
+            //Receber os dados em JSON
+            .then(function(data) {
+                console.log(data); //Verificar no console os dados recebidos
+
+                //Preenchendo os dados na tela
+                document.getElementById("txt_nome").innerHTML = data.name;
+                document.getElementById("img_pokemon").src = data.sprites.front_shiny;
+                document.getElementById("txt_tipo").innerHTML = data.types[0].type.name;
+            })
+            //Caso de alguma coisa dê errado
+            .catch(function(error) {
+                console.error(error);
+                alert("Ops! Não achamos esse Pokémon. Verifique se digitou certo!");
+            });
+        }
+    </script>
+</body>
+</html>
