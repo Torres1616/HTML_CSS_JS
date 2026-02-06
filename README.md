@@ -1,31 +1,37 @@
-# 📂 Repositório de Estudos Web (HTML, CSS e JS)
+# 💻 Meu Laboratório de Desenvolvimento Web
 
-Este repositório contém meus projetos práticos, exercícios da faculdade e testes de interface desenvolvidos enquanto aprimoro minhas habilidades em Front-end.
-
-## 🚀 O que você encontra aqui?
-
-### 📖 Projetos Principais
-* **Projeto CORTANA:** Desenvolvimento de interface personalizada (Pasta `projeto-cortana`).
-* **Projeto Cordel:** Estudo de tipografia e design responsivo (Pasta `Projeto-cordel`).
-* **Formulários e Testes:** Práticas de validação e estruturação de dados (Pastas `Formulário de teste` e `Iframe_teste`).
-
-### 🎓 Acadêmico
-* **Faculdade:** Exercícios e projetos desenvolvidos durante o curso de ADS (Pasta `Faculdade`).
-
-### 🧪 Laboratório de JS
-* Scripts e manipulações de DOM para interatividade (Pasta `JS`).
+Este repositório é onde documento minha jornada no Front-end. Ele contém desde exercícios fundamentais de lógica e estruturação até projetos de interfaces completas.
 
 ---
 
-## 🛠️ Tecnologias Aplicadas
-* **HTML5:** Estruturação semântica.
-* **CSS3:** Estilização, Flexbox, Grid e Backgrounds.
-* **JavaScript:** Lógica e dinamismo.
+## 📚 Biblioteca de Exercícios e Fundamentos
+Organizei meus estudos por tópicos para facilitar a consulta:
+
+### 🎨 CSS & Design
+* **Backgrounds:** Testes de posicionamento, imagens fixas e gradientes.
+* **Tipografia:** Implementação de fontes externas e estilização de textos.
+* **Responsividade:** Uso de Viewports e Media Queries.
+
+### 🏗️ Estruturação HTML
+* **Tabelas Complexas:** Domínio de `rowspan` e `colspan` para dados tabulares.
+* **Formulários:** Criação de inputs, validações e acessibilidade.
+* **Mídia:** Incorporação de vídeos, áudios e uso de IFrames.
 
 ---
 
-## 🔗 Como visualizar
-Você pode navegar pelas pastas acima para ver o código fonte. 
-> **Dica:** Ative o *GitHub Pages* nas configurações deste repositório para visualizar os projetos rodando no navegador!
+## 🛠️ Tecnologias Utilizadas
+<div align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+</div>
+
+---
+
+## 🎓 Sobre Mim
+Atualmente cursando **Análise e Desenvolvimento de Sistemas (ADS)**, focado em engenharia de software e em construir uma base sólida antes de avançar para frameworks como React ou PHP.
+
+---
+**Dica:** Navegue pelas pastas para ver o código fonte de cada exercício!
 
  
